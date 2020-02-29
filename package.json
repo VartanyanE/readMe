@@ -18,6 +18,9 @@
   "homepage": "https://github.com/VartanyanE/readMe#readme",
   "dependencies": {
     "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "electron": "^8.0.2",
+    "electron-html-to": "^2.6.0",
     "enquirer": "^2.3.4",
     "util": "^0.12.2"
   }
