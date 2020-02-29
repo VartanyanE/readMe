@@ -1,0 +1,19 @@
+{
+  "name": "readmegenerator",
+  "version": "1.0.0",
+  "description": "read me generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/VartanyanE/readMe.git"
+  },
+  "author": "Emanuil Vartanyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VartanyanE/readMe/issues"
+  },
+  "homepage": "https://github.com/VartanyanE/readMe#readme"
+}
