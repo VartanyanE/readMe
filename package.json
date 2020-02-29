@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/VartanyanE/readMe/issues"
   },
-  "homepage": "https://github.com/VartanyanE/readMe#readme"
+  "homepage": "https://github.com/VartanyanE/readMe#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "enquirer": "^2.3.4",
+    "util": "^0.12.2"
+  }
 }
