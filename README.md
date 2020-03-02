@@ -1,11 +1,11 @@
-  \* { color: red; } 
+ 
 
-fsdf
-====
+ReadMe Generator
+================
 
 ### Description
 
-sdf
+This is an app to create a professional looking README.MD
 
 ### Table Of Contents
 
@@ -20,14 +20,16 @@ sdf
 
 To install necessary dependencies, run the folliwing command
 
-sd
+npm install
 
 ### Usage
 
+NA
+
 ### To run tests run the following command
 
-fsd
+npm tests
 
 ### Questions
 
-If you have any questions, please contact Emanuil Vartanyan
+If you have any questions, please contact Emanuil Vartanyan directly at

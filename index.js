@@ -1,14 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-// const axios = require("axios");
+const axios = require("axios");
 const TurndownService = require('turndown');
+
 const writeFileAsync = util.promisify(fs.writeFile);
-
-
-
-
-
 
 function promptUser() {
     return inquirer.prompt([{
@@ -47,19 +43,24 @@ function promptUser() {
     }
     ]);
 }
+const getUserName = (answers) => {
+    const queryUrl = `https://api.github.com/users/${answers.name}`;
+    axios.get(queryUrl).then(function (res) {
 
+        return res.data.blog;
+    })
+}
 
 
 
 function generateHTML(answers) {
+
     let turndownService = new TurndownService();
     let markdown = turndownService.turndown(`<!DOCTYPE html>
     <html lang="en"><head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <style type="text/css" rel="stylesheet">
-        * { color: red; }
-        </style>
+        
         </head>
     <body>
         <div class="jumbotron jumbotron-fluid">
@@ -84,7 +85,7 @@ function generateHTML(answers) {
                 <h3>To run tests run the following command</h3>
                 <p>${answers.tests}
                 <h3>Questions</h3>
-                <p>If you have any questions, please contact Emanuil Vartanyan<p>
+                <p>If you have any questions, please contact Emanuil Vartanyan directly at  <p>
 
             </div>
         </div>
@@ -96,11 +97,14 @@ function generateHTML(answers) {
 
 }
 
+
 async function init() {
 
     try {
+
         const answers = await promptUser();
 
+        await getUserName(answers);
         const readMe = generateHTML(answers);
 
         await writeFileAsync("README.md", readMe);
@@ -113,22 +117,3 @@ async function init() {
 
 init();
 
-    // .then(function ({ username }) {
-    //     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
-
-    //     axios.get(queryUrl).then(function (res) {
-    //         const repoNames = res.data.map(function (repo) {
-    //             return repo.name;
-    //         });
-
-    //         const repoNamesStr = repoNames.join("\n");
-
-    //         fs.writeFile("README.md", repoNamesStr, function (err) {
-    //             if (err) {
-    //                 throw err;
-    //             }
-
-    //             console.log(`Saved ${repoNames.length} repos`);
-    //         });
-    //     });
-    // });
