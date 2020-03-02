@@ -1,11 +1,11 @@
- 
+  \* { color: red; } 
 
-ReadMe Generator
-================
+fsdf
+====
 
 ### Description
 
-This is an easy way to create a readme file.
+sdf
 
 ### Table Of Contents
 
@@ -20,15 +20,13 @@ This is an easy way to create a readme file.
 
 To install necessary dependencies, run the folliwing command
 
-npm i
+sd
 
 ### Usage
 
-Must be in markdown
-
 ### To run tests run the following command
 
-npm tests
+fsd
 
 ### Questions
 
