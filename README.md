@@ -1,11 +1,11 @@
  
 
-ReadMe Generator
+README GENERATOR
 ================
 
 ### Description
 
-This is an app to create a professional looking README.MD
+Creates a professional README file.
 
 ### Table Of Contents
 
@@ -24,7 +24,11 @@ npm install
 
 ### Usage
 
-NA
+Must be in markdown
+
+### License
+
+None required
 
 ### To run tests run the following command
 

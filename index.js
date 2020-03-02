@@ -82,6 +82,8 @@ function generateHTML(answers) {
                 <p>${answers.dependencies}</p>
                 <h3>Usage</h3>
                 <p>${answers.repocontribute}</p>
+                <h3>License</h3>
+                <p>${answers.license}</p>
                 <h3>To run tests run the following command</h3>
                 <p>${answers.tests}
                 <h3>Questions</h3>
