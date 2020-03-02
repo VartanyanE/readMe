@@ -54,13 +54,13 @@ function promptUser() {
 function generateHTML(answers) {
     let turndownService = new TurndownService();
     let markdown = turndownService.turndown(`<!DOCTYPE html>
+    
     <html lang="en">
     
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel = "stylesheet" href="./style.css">
+        
         
     </head>
     
@@ -68,13 +68,29 @@ function generateHTML(answers) {
     
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="heading">${answers.projectname}</h1>
-                <p class="lead">My projects name is ${answers.projectname}.</p>
-                <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+                <h1>${answers.projectname}</h1>
+                <h3 class="lead">Description</h3>
+                <p>${answers.description}</p>
+                
+                <h3>Table Of Contents</h3>
                 <ul class="list-group">
-                    <li class="list-group-item">My GitHub username is undefined</li>
-                    <li class="list-group-item">LinkedIn: undefined</li>
+                    <li class="list-group-item">Installation</li>
+                    <li class="list-group-item">Usage</li>
+                    <li class="list-group-item">License</li>
+                    <li class="list-group-item">Contributing</li>
+                    <li class="list-group-item">Tests</li>
+                    <li class="list-group-item">Questions</li>
                 </ul>
+                <h3>Installation</h3>
+                <p>To install necessary dependencies, run the folliwing command</p>
+                <p>${answers.dependencies}</p>
+                <h3>Usage</h3>
+                <p>${answers.repocontribute}</p>
+                <h3>To run tests run the following command</h3>
+                <p>${answers.tests}
+                <h3>Questions</h3>
+                <p>If you have any questions, please contact <a>Emanuil Vartanyan</a><p>
+
             </div>
         </div>
     </body>
