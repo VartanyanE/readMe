@@ -5,7 +5,7 @@
 
 ## Description
 
-This is a readme generator
+This is a readme.md generator
 
 
 ## Table of Contents
@@ -27,9 +27,20 @@ This is a readme generator
 To install necessary dependencies, run the following command.
 
 
-
     npm install
 
+## Usage
+
+Must be in markdown and contain an image
+
+## License
+
+    
+MIT
+
+## Contributing
+
+Must be able to run it on the command line
 
 ## Tests
 
@@ -37,25 +48,6 @@ To perform a test, run the following command:
 
     npm tests
     
-    
-
-## Usage
-
-Must be in markdown and contain an image.
-
-## Contributing
-
-Must be able to run it on the command line
-
-
-
-## License
-
-MIT
-
-
-
-
     
 ## Questions
 

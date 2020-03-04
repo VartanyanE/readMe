@@ -87,9 +87,20 @@ ${answers.description}
 To install necessary dependencies, run the following command.
 
 
-
     ${ answers.dependencies}
 
+## Usage
+
+${answers.repotips}
+
+## License
+
+    
+${answers.license}
+
+## Contributing
+
+${answers.repocontribute}
 
 ## Tests
 
@@ -97,25 +108,6 @@ To perform a test, run the following command:
 
     ${ answers.tests}
     
-    
-
-## Usage
-
-${answers.repotips}
-
-## Contributing
-
-${answers.repocontribute}
-
-
-
-## License
-
-${answers.license}
-
-
-
-
     
 ## Questions
 
