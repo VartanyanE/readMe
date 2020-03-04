@@ -50,6 +50,7 @@ const getUserName = (answers) => {
         // console.log(res.data.avatar_url);
 
         return res;
+
     })
 
 }
@@ -101,6 +102,10 @@ To perform a test, run the following command:
 ## Usage
 
 ${answers.repotips}
+
+## Contributing
+
+${answers.repocontribute}
 
 
 

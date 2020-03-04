@@ -1,5 +1,5 @@
 
-# ReadMe Generator 
+# README 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
@@ -41,7 +41,11 @@ To perform a test, run the following command:
 
 ## Usage
 
-Not a damn thing!
+Must be in markdown and contain an image.
+
+## Contributing
+
+Must be able to run it on the command line
 
 
 
