@@ -49,8 +49,8 @@ const getUserName = (answers) => {
 
     const queryUrl = `https://api.github.com/users/${answers.name}`;
     axios.get(queryUrl).then(function (res) {
-        // console.log(res.data.blog);
-        return res.data.blog;
+        console.log(res.data);
+        return res.data.avatar_url;
 
     })
 }
@@ -81,7 +81,9 @@ ${answers.description}
 
 To install necessary dependencies, run the following command.
 
-${answers.dependencies}
+    ${ answers.dependencies}
+
+
 
 ## Usage
 
@@ -93,9 +95,13 @@ ${answers.license}
 
 ## Tests
 
-${answers.tests}
+
+    ${ answers.tests}
+
 
 ## Questions
+
+![Markdown Logo](${link})
 
 
 
