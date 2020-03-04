@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const axios = require("axios");
-const TurndownService = require('turndown');
+// const TurndownService = require('turndown');
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -45,116 +45,83 @@ const promptUser = () => {
 }
 const getUserName = (answers) => {
 
-
-
     const queryUrl = `https://api.github.com/users/${answers.name}`;
     axios.get(queryUrl).then(function (res) {
-        console.log(res.data);
-        return res.data.avatar_url;
+        // console.log(res.data.avatar_url);
 
+        return res;
     })
+
 }
 
 
-let generateHTML = (answers, link) => {
+const generateHTML = (answers) => {
+
     return `
 # ${answers.projectname} 
 
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+
 ## Description
+
 ${answers.description}
+
 
 ## Table of Contents
 
-* Installation
+* [Installation](#Installation) 
 
-* Usage
+* [Usage](#Usage) 
 
-* License
+* [License](#License) 
 
-* Contributing
+* [Contributing](#Contributing) 
 
-* Tests
+* [Tests](#Tests)
 
-* Questions
+* [Questions](#Questions)
 
 ## Installation
 
 To install necessary dependencies, run the following command.
 
+
+
     ${ answers.dependencies}
 
 
+## Tests
+
+To perform a test, run the following command:
+
+    ${ answers.tests}
+    
+    
 
 ## Usage
 
 ${answers.repotips}
 
+
+
 ## License
 
 ${answers.license}
 
-## Tests
 
 
-    ${ answers.tests}
 
-
+    
 ## Questions
 
-![Markdown Logo](${link})
+![Markdown Logo]()
 
 
 
-If you have any questions please contact ${answers.name} directly at ${link}
+
+
+If you have any questions please contact ${answers.name} directly at 
 `
-
-
-
-    // let turndownService = new TurndownService();
-    // let markdown = turndownService.turndown(`<!DOCTYPE html>
-    // <html lang="en"><head>
-    //     <meta charset="UTF-8">
-    //     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    //     </head>
-    // <body>
-    //     <div class="jumbotron jumbotron-fluid">
-    //         <div class="container">
-    //             <h1>${answers.projectname}</h1>
-    //             <h3 class="lead">Description</h3>
-    //             <p>${answers.description}</p>
-    //             <h3>Table Of Contents</h3>
-    //             <ul class="list-group">
-    //                 <li class="list-group-item">Installation</li>
-    //                 <li class="list-group-item">Usage</li>
-    //                 <li class="list-group-item">License</li>
-    //                 <li class="list-group-item">Contributing</li>
-    //                 <li class="list-group-item">Tests</li>
-    //                 <li class="list-group-item">Questions</li>
-    //             </ul>
-    //             <h3>Installation</h3>
-    //             <p>To install necessary dependencies, run the folliwing command</p>
-    //             <p>${answers.dependencies}</p>
-    //             <h3>Usage</h3>
-    //             <p>${answers.repocontribute}</p>
-    //             <h3>License</h3>
-    //             <p>${answers.license}</p>
-    //             <h3>To run tests run the following command</h3>
-    //             <p>${answers.tests}
-    //             <h3>Questions</h3>
-    //             <p>If you have any questions, please contact ${answers.name} directly at ${link}  <p>
-
-    //         </div>
-    //     </div>
-    // </body>
-
-    // </html>`);
-
-
-
-    // return markdown;
-
-
 }
 
 
@@ -164,8 +131,9 @@ async function init() {
 
         const answers = await promptUser();
 
-        const link = await getUserName(answers);
-        const readMe = generateHTML(answers, link);
+        const image = await getUserName(answers);
+
+        const readMe = generateHTML(answers, image);
 
         await writeFileAsync("README.md", readMe);
 
