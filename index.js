@@ -59,7 +59,48 @@ const getUserName = (answers) => {
 let generateHTML = (answers, link) => {
     return `
 # ${answers.projectname} 
-## This is an H2 `
+
+## Description
+${answers.description}
+
+## Table of Contents
+
+* Installation
+
+* Usage
+
+* License
+
+* Contributing
+
+* Tests
+
+* Questions
+
+## Installation
+
+To install necessary dependencies, run the following command.
+
+${answers.dependencies}
+
+## Usage
+
+${answers.repotips}
+
+## License
+
+${answers.license}
+
+## Tests
+
+${answers.tests}
+
+## Questions
+
+
+
+If you have any questions please contact ${answers.name} directly at ${link}
+`
 
 
 
