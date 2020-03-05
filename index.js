@@ -5,6 +5,7 @@ const axios = require("axios");
 // const TurndownService = require('turndown');
 
 const writeFileAsync = util.promisify(fs.writeFile);
+// let githubApi = '';
 
 const promptUser = () => {
     return inquirer.prompt([{
@@ -46,20 +47,33 @@ const promptUser = () => {
 const getUserName = (answers) => {
 
     const queryUrl = `https://api.github.com/users/${answers.name}`;
-    axios.get(queryUrl).then(function (res) {
-        // console.log(res.data.avatar_url);
 
-        return res;
+    return axios.get(queryUrl).then(function (result) {
+        const resultData = (result.data);
+        // githubApi = result;
+        return resultData;
 
-    })
+    });
 
 }
 
+// const getUserName2 = () => {
 
-const generateHTML = (answers) => {
+//     const queryUrl = 'https://api.github.com/users/vartanyanE';
+//     axios.get(queryUrl).then(function (result) {
+//         const resultImage = (result.data.avatar_url);
+//         // githubApi = result;
+//         return resultImage;
 
+//     })
+
+// }
+
+const generateHTML = (answers, image) => {
+    // console.log(image);
     return `
-# ${answers.projectname} 
+
+    # ${answers.projectname} 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
@@ -111,13 +125,13 @@ To perform a test, run the following command:
     
 ## Questions
 
-![Markdown Logo]()
+![Markdown Logo](${image.avatar_url})
 
 
 
 
 
-If you have any questions please contact ${answers.name} directly at 
+If you have any questions please contact ${answers.name} directly at ${image.blog}
 `
 }
 
@@ -141,4 +155,5 @@ async function init() {
 }
 
 init();
+
 
