@@ -73,7 +73,7 @@ const generateHTML = (answers, image) => {
     // console.log(image);
     return `
 
-    # ${answers.projectname} 
+# ${answers.projectname} 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 

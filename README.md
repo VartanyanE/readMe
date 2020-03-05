@@ -1,12 +1,12 @@
 
 
-    # README GEN 
+# READ ME GENERATOR 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ## Description
 
-This is a readme generator
+This is an app to make a detailed README.md
 
 
 ## Table of Contents
@@ -41,7 +41,7 @@ MIT
 
 ## Contributing
 
-Must be in markdown and an image
+Must be in markdown and contain an image
 
 ## Tests
 
