@@ -1,12 +1,12 @@
 
 
-# READ ME GENERATOR 
+# README GENERATOR 
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 
 ## Description
 
-This is an app to make a detailed README.md
+This is a README.md generator
 
 
 ## Table of Contents
@@ -32,7 +32,7 @@ To install necessary dependencies, run the following command.
 
 ## Usage
 
-Must be able to run on the command line
+Dont mess it up!
 
 ## License
 
@@ -41,7 +41,7 @@ MIT
 
 ## Contributing
 
-Must be in markdown and contain an image
+Must be in markdown
 
 ## Tests
 
@@ -52,7 +52,8 @@ To perform a test, run the following command:
     
 ## Questions
 
-![Markdown Logo](https://avatars1.githubusercontent.com/u/15513093?v=4)
+
+<img src="https://avatars1.githubusercontent.com/u/15513093?v=4" alt="avatar" style="border-radius: 16px" width="30"/>
 
 
 

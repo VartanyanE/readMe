@@ -125,7 +125,8 @@ To perform a test, run the following command:
     
 ## Questions
 
-![Markdown Logo](${image.avatar_url})
+
+<img src="${image.avatar_url}" alt="avatar" style="border-radius: 16px" width="30"/>
 
 
 
